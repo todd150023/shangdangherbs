@@ -1,0 +1,20 @@
+{
+  "name": "chinese-herbs-website",
+  "version": "1.0.0",
+  "description": "中药材大全在线查询网站",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "中药材",
+    "中医药",
+    "在线查询"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

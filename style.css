@@ -1,0 +1,1275 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+/* 搜索部分 */
+.search-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.search-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #8B4513, #DAA520, #8B4513);
+}
+
+.search-section h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #8B4513;
+    font-family: 'Microsoft YaHei', 'SimSun', serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.search-section h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #DAA520, transparent);
+}
+
+.search-section .subtitle {
+    font-size: 22px;
+    color: #8B4513;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #DAA520;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: all 0.3s;
+    background-color: #f9f9f9;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #8B4513;
+    box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
+}
+
+.search-box button {
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #8B4513, #DAA520);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(139, 69, 19, 0.2);
+}
+
+.search-box button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(139, 69, 19, 0.3);
+}
+
+.search-box button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(139, 69, 19, 0.2);
+}
+
+/* 分类 */
+.categories {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.categories::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, #8B4513, #DAA520, #8B4513);
+    border-radius: 12px 0 0 12px;
+}
+
+.categories a {
+    text-decoration: none;
+    color: #8B4513;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    background-color: #f9f5f0;
+    border: 1px solid #DAA520;
+    box-shadow: 0 2px 4px rgba(139, 69, 19, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.categories a:hover {
+    background-color: #8B4513;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(139, 69, 19, 0.2);
+}
+
+/* 中药材列表 */
+.herbs-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 25px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+.herbs-list::-webkit-scrollbar {
+    height: 8px;
+}
+
+.herbs-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.herbs-list::-webkit-scrollbar-thumb {
+    background: #DAA520;
+    border-radius: 10px;
+}
+
+.herbs-list::-webkit-scrollbar-thumb:hover {
+    background: #8B4513;
+}
+
+.herb-item {
+    min-width: 300px;
+}
+
+.herb-item {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #f0e6d2;
+}
+
+.herb-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #8B4513, #DAA520, #8B4513);
+}
+
+.herb-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.herb-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.herb-item:hover img {
+    transform: scale(1.05);
+}
+
+.herb-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #8B4513;
+    font-family: 'Microsoft YaHei', 'SimSun', serif;
+    font-weight: bold;
+}
+
+.herb-item p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    background-color: #f9f5f0;
+    padding: 10px;
+    border-radius: 6px;
+    border-left: 3px solid #DAA520;
+}
+
+
+
+/* 药物卡片 */
+.herb-card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.herb-card.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.herb-card.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card-content {
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        padding: 30px;
+        max-width: 800px;
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+        display: flex;
+        gap: 30px;
+        position: relative;
+        transform: scale(0.8);
+        transition: all 0.3s ease;
+        border: 1px solid #f0e6d2;
+        min-height: 400px;
+    }
+
+/* 滑动动画 */
+.card-content.slide-left {
+    transform: translateX(-100%) scale(0.8);
+    opacity: 0;
+}
+
+.card-content.slide-right {
+    transform: translateX(100%) scale(0.8);
+    opacity: 0;
+}
+
+.card-content.slide-left-enter {
+    transform: translateX(100%) scale(0.8);
+    opacity: 0;
+    animation: slideLeftEnter 0.3s ease forwards;
+}
+
+.card-content.slide-right-enter {
+    transform: translateX(-100%) scale(0.8);
+    opacity: 0;
+    animation: slideRightEnter 0.3s ease forwards;
+}
+
+@keyframes slideLeftEnter {
+    from {
+        transform: translateX(100%) scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRightEnter {
+    from {
+        transform: translateX(-100%) scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.herb-card.show .card-content {
+    transform: scale(1);
+}
+
+.card-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #8B4513, #DAA520, #8B4513);
+    border-radius: 12px 12px 0 0;
+}
+
+.card-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #8B4513;
+    font-family: 'Microsoft YaHei', 'SimSun', serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.card-info p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    .card-info .efficacy-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .card-info .efficacy-item {
+        background-color: #f9f5f0;
+        padding: 12px;
+        border-radius: 8px;
+        border-left: 4px solid #DAA520;
+    }
+
+    .card-info .efficacy-item.english {
+        font-style: normal;
+    }
+
+.card-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image img {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #8B4513;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.close-btn:hover {
+    background-color: #DAA520;
+    transform: scale(1.1);
+}
+
+/* 卡片导航按钮 */
+.card-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    border: 1px solid #DAA520;
+    background-color: #fff;
+    color: #8B4513;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-btn:hover {
+    background-color: #8B4513;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(139, 69, 19, 0.2);
+}
+
+/* 响应式设计 - 手机小屏 (320px - 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .search-section {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+
+    .search-section h1 {
+        font-size: 20px;
+        letter-spacing: 0.5px;
+        margin-bottom: 15px;
+    }
+
+    .search-section h1::after {
+        width: 60px;
+        bottom: -5px;
+    }
+
+    .search-section .subtitle {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .search-box {
+        gap: 8px;
+    }
+
+    .search-box input {
+        padding: 10px 12px;
+        font-size: 14px;
+        border-radius: 20px;
+    }
+
+    .search-box button {
+        padding: 12px 20px;
+        font-size: 16px;
+        border-radius: 20px;
+    }
+
+    .categories {
+        padding: 12px;
+        gap: 6px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+
+    .categories::before {
+        width: 3px;
+    }
+
+    .categories a {
+        font-size: 11px;
+        padding: 5px 10px;
+        border-radius: 15px;
+    }
+
+    .herbs-list {
+        gap: 15px;
+        padding-bottom: 8px;
+    }
+
+    .herb-item {
+        min-width: 260px;
+        padding: 12px;
+        border-radius: 8px;
+    }
+
+    .herb-item::before {
+        height: 3px;
+    }
+
+    .herb-item img {
+        height: 150px;
+        border-radius: 6px;
+        margin-bottom: 10px;
+    }
+
+    .herb-item h3 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .herb-item p {
+        font-size: 12px;
+        padding: 8px;
+        border-radius: 4px;
+        border-left-width: 2px;
+    }
+
+    .card-content {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+        width: 95%;
+        max-height: 85vh;
+        border-radius: 8px;
+    }
+
+    .card-info {
+        order: 2;
+    }
+
+    .card-info h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .card-info p {
+        font-size: 13px;
+        margin-bottom: 6px;
+        line-height: 1.5;
+    }
+
+    .card-info p:first-of-type {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .card-info .efficacy-container {
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+
+    .card-info .efficacy-item {
+        padding: 10px;
+        border-left-width: 3px;
+        border-radius: 6px;
+    }
+
+    .card-image {
+        order: 1;
+        flex: none;
+    }
+
+    .card-image img {
+        max-width: 200px;
+        height: 200px;
+        border-radius: 6px;
+    }
+
+    .close-btn {
+        top: 10px;
+        right: 10px;
+        width: 26px;
+        height: 26px;
+        font-size: 18px;
+        z-index: 10;
+    }
+
+    .card-nav {
+        bottom: 10px;
+        gap: 10px;
+    }
+
+    .nav-btn {
+        padding: 8px 14px;
+        font-size: 12px;
+        border-radius: 20px;
+    }
+
+    .related-cards {
+        margin-top: 20px;
+        padding: 0 10px;
+        padding-top: 15px;
+    }
+
+    .related-cards h4 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .related-cards-container {
+        gap: 8px;
+    }
+
+    .related-card {
+        flex: 0 0 90px;
+        border-radius: 6px;
+    }
+
+    .related-card img {
+        height: 60px;
+    }
+
+    .related-card h5 {
+        font-size: 11px;
+        padding: 6px;
+    }
+}
+
+/* 响应式设计 - 手机大屏/小平板 (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .search-section {
+        padding: 20px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+    }
+
+    .search-section h1 {
+        font-size: 22px;
+        letter-spacing: 1px;
+        margin-bottom: 18px;
+    }
+
+    .search-section .subtitle {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .search-box {
+        gap: 10px;
+    }
+
+    .search-box input {
+        padding: 11px 14px;
+        font-size: 15px;
+    }
+
+    .search-box button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    .categories {
+        padding: 15px;
+        gap: 10px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+    }
+
+    .categories a {
+        font-size: 13px;
+        padding: 7px 14px;
+        border-radius: 18px;
+    }
+
+    .herbs-list {
+        gap: 20px;
+        padding-bottom: 10px;
+    }
+
+    .herb-item {
+        min-width: 280px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .herb-item::before {
+        height: 3px;
+    }
+
+    .herb-item img {
+        height: 170px;
+        border-radius: 6px;
+        margin-bottom: 12px;
+    }
+
+    .herb-item h3 {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .herb-item p {
+        font-size: 13px;
+        padding: 9px;
+        border-radius: 5px;
+    }
+
+    .card-content {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        width: 92%;
+        max-height: 82vh;
+        border-radius: 10px;
+    }
+
+    .card-info {
+        order: 2;
+    }
+
+    .card-info h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .card-info p {
+        font-size: 14px;
+        margin-bottom: 8px;
+        line-height: 1.5;
+    }
+
+    .card-info p:first-of-type {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+
+    .card-info .efficacy-container {
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+
+    .card-info .efficacy-item {
+        padding: 10px;
+        border-left-width: 3px;
+        border-radius: 6px;
+    }
+
+    .card-image {
+        order: 1;
+        flex: none;
+        justify-content: center;
+    }
+
+    .card-image img {
+        max-width: 240px;
+        height: 240px;
+        border-radius: 8px;
+    }
+
+    .close-btn {
+        top: 12px;
+        right: 12px;
+        width: 28px;
+        height: 28px;
+        font-size: 18px;
+    }
+
+    .card-nav {
+        bottom: 15px;
+        gap: 15px;
+    }
+
+    .nav-btn {
+        padding: 9px 16px;
+        font-size: 13px;
+        border-radius: 20px;
+    }
+
+    .related-cards {
+        margin-top: 25px;
+        padding: 0 15px;
+        padding-top: 18px;
+    }
+
+    .related-cards h4 {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+    .related-cards-container {
+        gap: 10px;
+    }
+
+    .related-card {
+        flex: 0 0 110px;
+        border-radius: 6px;
+    }
+
+    .related-card img {
+        height: 70px;
+    }
+
+    .related-card h5 {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+/* 响应式设计 - 平板横屏和大手机 (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 20px;
+    }
+
+    .search-section {
+        padding: 25px;
+        margin-bottom: 25px;
+    }
+
+    .search-section h1 {
+        font-size: 26px;
+    }
+
+    .search-box {
+        max-width: 500px;
+    }
+
+    .herb-item {
+        min-width: 290px;
+    }
+
+    .herb-item img {
+        height: 190px;
+    }
+
+    .card-content {
+        padding: 25px;
+        gap: 25px;
+    }
+
+    .card-info h3 {
+        font-size: 22px;
+    }
+
+    .card-image img {
+        max-width: 280px;
+        height: 280px;
+    }
+
+    .related-card {
+        flex: 0 0 115px;
+    }
+
+    .related-card img {
+        height: 75px;
+    }
+}
+
+/* 响应式设计 - 小桌面 (1025px - 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .container {
+        max-width: 1100px;
+    }
+
+    .search-section h1 {
+        font-size: 28px;
+    }
+
+    .herb-item {
+        min-width: 280px;
+    }
+
+    .herb-item img {
+        height: 195px;
+    }
+
+    .card-content {
+        max-width: 750px;
+    }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) and (pointer: coarse) {
+    .herb-item:hover {
+        transform: none;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .herb-item:active {
+        transform: scale(0.98);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .herb-item img:hover {
+        transform: none;
+    }
+
+    .categories a:hover {
+        transform: none;
+        background-color: #f9f5f0;
+        color: #8B4513;
+    }
+
+    .categories a:active {
+        background-color: #8B4513;
+        color: #fff;
+    }
+
+    .search-box button:hover {
+        transform: none;
+        box-shadow: 0 4px 6px rgba(139, 69, 19, 0.2);
+    }
+
+    .search-box button:active {
+        transform: scale(0.95);
+    }
+
+    .related-card:hover {
+        transform: none;
+    }
+
+    .related-card:active {
+        transform: scale(0.95);
+    }
+
+    .nav-btn:hover {
+        transform: none;
+    }
+
+    .nav-btn:active {
+        background-color: #8B4513;
+        color: #fff;
+    }
+
+    .close-btn:hover {
+        transform: none;
+        background-color: #8B4513;
+    }
+
+    .close-btn:active {
+        transform: scale(0.9);
+        background-color: #DAA520;
+    }
+
+    .card-content {
+        touch-action: pan-y;
+    }
+}
+
+/* 高分辨率屏幕优化 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .herb-item img,
+    .card-image img,
+    .related-card img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* 安全区域适配 - iPhone X 及以上 */
+@supports (padding: env(safe-area-inset-bottom)) {
+    .container {
+        padding-left: calc(15px + env(safe-area-inset-left));
+        padding-right: calc(15px + env(safe-area-inset-right));
+        padding-bottom: calc(15px + env(safe-area-inset-bottom));
+    }
+
+    .card-content {
+        max-height: calc(90vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    }
+
+    .card-nav {
+        bottom: calc(20px + env(safe-area-inset-bottom));
+    }
+}
+
+/* 平板横屏特殊优化 */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .card-content {
+        flex-direction: row;
+        max-width: 85%;
+    }
+
+    .card-info {
+        order: 1;
+        flex: 1;
+        justify-content: flex-start;
+        padding-top: 10px;
+    }
+
+    .card-image {
+        order: 2;
+        flex: 1;
+    }
+
+    .card-image img {
+        max-width: 100%;
+        height: auto;
+        max-height: 350px;
+    }
+
+    .card-info h3 {
+        text-align: left;
+    }
+}
+
+/* 极小屏幕优化 (小于 320px) */
+@media (max-width: 320px) {
+    .search-section h1 {
+        font-size: 18px;
+    }
+
+    .search-section .subtitle {
+        font-size: 14px;
+    }
+
+    .categories a {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    .herb-item {
+        min-width: 240px;
+        padding: 10px;
+    }
+
+    .herb-item img {
+        height: 130px;
+    }
+
+    .card-image img {
+        max-width: 160px;
+        height: 160px;
+    }
+}
+
+/* 原有平板样式保留 */
+@media (max-width: 768px) {
+    .search-section {
+        padding: 20px;
+    }
+
+    .search-section h1 {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .search-box input {
+        padding: 10px 14px;
+    }
+
+    .search-box button {
+        padding: 10px 20px;
+    }
+
+    .categories {
+        padding: 15px;
+        gap: 8px;
+    }
+
+    .categories a {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .herbs-list {
+        gap: 20px;
+    }
+
+    .herb-item {
+        min-width: 280px;
+        padding: 15px;
+        cursor: pointer;
+    }
+
+    .herb-item img {
+        height: 180px;
+    }
+
+    .herb-item h3 {
+        font-size: 16px;
+    }
+
+    .herb-item p {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .card-content {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .card-info h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .card-info p {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .card-info p:first-of-type {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+
+    .card-image img {
+        max-width: 250px;
+        height: 250px;
+    }
+
+    .card-nav {
+        bottom: 15px;
+        gap: 15px;
+    }
+
+    .nav-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .related-cards-container {
+        gap: 10px;
+    }
+
+    .related-card {
+        flex: 0 0 100px;
+    }
+
+    .related-card img {
+        height: 70px;
+    }
+
+    .related-card h5 {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+/* 悬停效果 */
+.herb-item {
+    cursor: pointer;
+}
+
+.categories a {
+    cursor: pointer;
+}
+
+/* 相关卡片 */
+.related-cards {
+    margin-top: 30px;
+    padding: 0 20px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 20px;
+}
+
+.related-cards h4 {
+    color: #d4a76a;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.related-cards-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.related-card {
+    flex: 0 0 120px;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.related-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.related-card img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+}
+
+.related-card h5 {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    margin: 0;
+    color: #333;
+}
+
+/* 响应式设计 - 相关卡片 */
+@media (max-width: 768px) {
+    .related-cards-container {
+        gap: 10px;
+    }
+    
+    .related-card {
+        flex: 0 0 100px;
+    }
+    
+    .related-card img {
+        height: 70px;
+    }
+    
+    .related-card h5 {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
